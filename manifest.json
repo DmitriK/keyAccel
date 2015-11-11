@@ -1,0 +1,21 @@
+{
+
+  "description": "Adds Konqueror-like keyboard accelerators when holding [Ctrl] key for links.",
+  "manifest_version": 2,
+  "name": "KeyAccel",
+  "version": "0.2",
+
+  "applications": {
+    "gecko": {
+      "id": "keyaccel@monochrome101.addons.mozilla.org"
+    }
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["genAccels.js"]
+    }
+  ]
+
+}
